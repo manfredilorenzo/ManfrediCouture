@@ -32,41 +32,8 @@ const cognomeRegistrati = document.getElementById("cognomeRegistrati");
 const usernameRegistrati = document.getElementById("usernameRegistrati");
 const passwordRegistrati = document.getElementById("passwordRegistrati");
 
+const divAfterLog = document.getElementById("divAfterLog");
 
-let afterLog = `
-<p>Accesso eseguito.</p>
-<hr>
-<h3>Azioni Account</h3>
-<div class="row justify-content-center text-center" >
-  <div class="col">
-    <button class="btn btn-light" id="btnGoToChat" style="width: 150px; height: 50px; padding-left: 15px;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat-dots-fill" viewBox="0 0 16 16">
-      <path d="M16 8c0 3.866-3.582 7-8 7a9 9 0 0 1-2.347-.306c-.584.296-1.925.864-4.181 1.234-.2.032-.352-.176-.273-.362.354-.836.674-1.95.77-2.966C.744 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7M5 8a1 1 0 1 0-2 0 1 1 0 0 0 2 0m4 0a1 1 0 1 0-2 0 1 1 0 0 0 2 0m3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2"/>
-      </svg> Chat</button>
-  </div>
-  <div class="col">
-    <button class="btn btn-light" id="btnGoToChat" style="width: 150px; height: 50px; padding-left: 15px;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat-dots-fill" viewBox="0 0 16 16">
-    <path d="M16 8c0 3.866-3.582 7-8 7a9 9 0 0 1-2.347-.306c-.584.296-1.925.864-4.181 1.234-.2.032-.352-.176-.273-.362.354-.836.674-1.95.77-2.966C.744 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7M5 8a1 1 0 1 0-2 0 1 1 0 0 0 2 0m4 0a1 1 0 1 0-2 0 1 1 0 0 0 2 0m3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2"/>
-      </svg> Chat</button>
-  </div>
-<hr class="mt-3 mb-2" style="width:90%">
-</div>
-
-<div class="row justify-content-center text-center" >
-                        <div class="col">
-                            <button class="btn btn-light" id="btnGoToChat" style="width: 150px; height: 50px; padding-left: 15px;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat-dots-fill" viewBox="0 0 16 16">
-                            <path d="M16 8c0 3.866-3.582 7-8 7a9 9 0 0 1-2.347-.306c-.584.296-1.925.864-4.181 1.234-.2.032-.352-.176-.273-.362.354-.836.674-1.95.77-2.966C.744 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7M5 8a1 1 0 1 0-2 0 1 1 0 0 0 2 0m4 0a1 1 0 1 0-2 0 1 1 0 0 0 2 0m3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2"/>
-                          </svg> Chat</button>
-                        </div>
-                        <div class="col">
-                            <button class="btn btn-light" id="btnGoToChat" style="width: 150px; height: 50px; padding-left: 15px;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat-dots-fill" viewBox="0 0 16 16">
-                            <path d="M16 8c0 3.866-3.582 7-8 7a9 9 0 0 1-2.347-.306c-.584.296-1.925.864-4.181 1.234-.2.032-.352-.176-.273-.362.354-.836.674-1.95.77-2.966C.744 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7M5 8a1 1 0 1 0-2 0 1 1 0 0 0 2 0m4 0a1 1 0 1 0-2 0 1 1 0 0 0 2 0m3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2"/>
-                          </svg> Chat</button>
-                        </div>
-                        <hr class="mt-3 mb-2" style="width:90%">
-                    </div>
-         
-<button class='btn btn-outline-danger'>Esci dal tuo Account</button>
-`;
 
 areaPrivata.onclick = () => {
   divRegistrati.classList.remove("mostra");
@@ -105,7 +72,8 @@ btnAccediFooter.onclick = () => {
   divAccedi.classList.remove("mostra");
   divAccedi.classList.add("nascondi");
 
-  divBtnAccReg.innerHTML = afterLog;
+  divAfterLog.classList.remove("nascondi");
+  divAfterLog.classList.add("mostra");
 }
 
 btnRegistratiFooter.onclick = () => {
@@ -121,5 +89,6 @@ btnRegistratiFooter.onclick = () => {
   divRegistrati.classList.remove("mostra");
   divRegistrati.classList.add("nascondi");
 
-  divBtnAccReg.innerHTML = afterLog;
+  divAfterLog.classList.remove("nascondi");
+  divAfterLog.classList.add("mostra");
 }
