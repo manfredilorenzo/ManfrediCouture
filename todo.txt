@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Manfredi Couture</title>
+    <meta charset="UTF-8" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <title>Manfredi Couture </title>
+    <link href="style.css" rel="stylesheet">
+    <link rel="icon" href="/images/little logo.png" style="border-radius: 50%;">
+    <style>
+        .center-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .mostra {
+            display: block;
+        }
+
+
+        .nascondi {
+            display: none;
+        }
+    </style>
+
+
+
+</head>
+
+<!--#ecd8bd-->
+
+<body class=" " style="background-color: #dbbb92">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-dark bg-dark fixed-top mb-5">
+        <div class="container-fluid">
+            <!--Testo che gira-->
+            <marquee direction="right" scrollamount="5" style="color:white" class="bg-black">Capolavoro di Lorenzo
+                Manfredi 5C inf 2023/2024</marquee>
+
+            <a class="navbar-brand" href="#">
+                <img src="/images/little logo.png" alt="Logo" width="30" height="24"
+                    class="d-inline-block align-text-top">
+                Manfredi Couture
+            </a>
+            <button type="button" class="btn btn-dark" id="areaPrivata" data-bs-toggle="modal"
+                data-bs-target="#modaleAreaPrivata" style="margin-left:80%">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                    class="bi bi-person-circle" viewBox="0 0 16 16">
+                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
+                    <path fill-rule="evenodd"
+                        d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
+                </svg>
+            </button>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!--MODALE-->
+    <div class="modal fade" id="modaleAreaPrivata" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog " role="document">
+            <div class="modal-content bg-dark">
+                <div class="modal-header">
+                    <h5 class="modal-title text-white" id="exampleModalLabel">Area Privata</h5>
+                    <button type="button" class=" btn btn-danger" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-white">
+                    <div class="mostra" id="divBtnAccReg">
+                        <div class="row justify-content-center text-center">
+                            <div class="col">
+                                <button class="btn btn-light" id="btnAccedi" style="width: 150px; height: 50px;"> <svg
+                                        xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                        class="bi bi-box-arrow-in-right" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0z" />
+                                        <path fill-rule="evenodd"
+                                            d="M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z" />
+                                    </svg> Accedi</button>
+                            </div>
+                            <div class="col">
+                                <button class="btn btn-light" id="btnRegistrati"
+                                    style="width: 150px; height: 50px; padding-left: 15px;"><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                        class="bi bi-person-plus-fill" viewBox="0 0 16 16">
+                                        <path
+                                            d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
+                                        <path fill-rule="evenodd"
+                                            d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5" />
+                                    </svg> Registrati</button>
+                            </div>
+                            <hr class="mt-3" style="width:90%">
+                        </div>
+                    </div>
+
+                    <div class="container nascondi" style="width: 80%;" id="accedi">
+                        <label for="usernameAccedi" class="text-white">Username <span
+                                style="color:red; font-size: 20px;" data-bs-toggle="tooltip" data-bs-html="true"
+                                title="Campo obbligatorio">*</span> </label> <br>
+                        <input type="text" class="input-group" id="usernameAccedi"> <br>
+                        <label for="passwordAccedi" class="text-white">Password <span
+                                style="color:red; font-size: 20px;" data-bs-toggle="tooltip" data-bs-html="true"
+                                title="Campo obbligatorio">*</span></label> <br>
+                        <input type="password" class="input-group" id="passwordAccedi">
+                        <button type="button" class="btn btn-primary btn-sm mt-3 mb-2" style="width: 100%;"
+                            id="btnAccediFooter">Accedi</button>
+
+                    </div>
+
+                    <div class="container" style="width: 80%;" id="registrati">
+                        <div class="row">
+                            <div class="col">
+                                <label for="nomeRegistrati" class="text-white">Nome <span
+                                        style="color:red; font-size: 20px;" data-bs-toggle="tooltip" data-bs-html="true"
+                                        title="Campo obbligatorio">*</span> </label> <br>
+                                <input type="text" class="input-group" id="nomeRegistrati"> <br>
+                            </div>
+                            <div class="col">
+                                <label for="cognomeRegistrati" class="text-white">Cognome <span
+                                        style="color:red; font-size: 20px;" data-bs-toggle="tooltip" data-bs-html="true"
+                                        title="Campo obbligatorio">*</span> </label> <br>
+                                <input type="text" class="input-group" id="cognomeRegistrati"> <br>
+                            </div>
+                        </div>
+                        <label for="usernameRegistrati" class="text-white">Username <span
+                                style="color:red; font-size: 20px;" data-bs-toggle="tooltip" data-bs-html="true"
+                                title="Campo obbligatorio">*</span> </label> <br>
+                        <input type="text" class="input-group" id="usernameRegistrati"> <br>
+                        <label for="passwordRegistrati" class="text-white">Password <span
+                                style="color:red; font-size: 20px;" data-bs-toggle="tooltip" data-bs-html="true"
+                                title="Campo obbligatorio">*</span></label> <br>
+                        <input type="password" class="input-group" id="passwordRegistrati">
+
+                        <button type="button" class="btn btn-primary btn-sm mt-3 mb-2" style="width: 100%;"
+                            id="btnRegistratiFooter">Registrati</button>
+                    </div>
+
+                    <!---DIV MODALE afterlog  -->
+
+                    <div class="container nascondi" id="divAfterLog">
+
+                        <p>Accesso eseguito.</p>
+                        <hr>
+                        <h3>Azioni Account</h3>
+                        <div class="row justify-content-center text-center">
+                            <div class="col">
+                                <button class="btn btn-light" id="btnGoToChat"
+                                    style="width: 150px; height: 50px; padding-left: 15px;"><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-chat-dots-fill" viewBox="0 0 16 16">
+                                        <path
+                                            d="M16 8c0 3.866-3.582 7-8 7a9 9 0 0 1-2.347-.306c-.584.296-1.925.864-4.181 1.234-.2.032-.352-.176-.273-.362.354-.836.674-1.95.77-2.966C.744 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7M5 8a1 1 0 1 0-2 0 1 1 0 0 0 2 0m4 0a1 1 0 1 0-2 0 1 1 0 0 0 2 0m3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2" />
+                                    </svg> Chat</button>
+                            </div>
+                            <div class="col">
+                                <button class="btn btn-light" id="btnGoToChat"
+                                    style="width: 150px; height: 50px; padding-left: 15px;"><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-chat-dots-fill" viewBox="0 0 16 16">
+                                        <path
+                                            d="M16 8c0 3.866-3.582 7-8 7a9 9 0 0 1-2.347-.306c-.584.296-1.925.864-4.181 1.234-.2.032-.352-.176-.273-.362.354-.836.674-1.95.77-2.966C.744 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7M5 8a1 1 0 1 0-2 0 1 1 0 0 0 2 0m4 0a1 1 0 1 0-2 0 1 1 0 0 0 2 0m3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2" />
+                                    </svg> Chat</button>
+                            </div>
+                            <hr class="mt-3 mb-2" style="width:90%">
+                        </div>
+
+                        <div class="row justify-content-center text-center">
+                            <div class="col">
+                                <button class="btn btn-light" id="btnGoToChat"
+                                    style="width: 150px; height: 50px; padding-left: 15px;"><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-chat-dots-fill" viewBox="0 0 16 16">
+                                        <path
+                                            d="M16 8c0 3.866-3.582 7-8 7a9 9 0 0 1-2.347-.306c-.584.296-1.925.864-4.181 1.234-.2.032-.352-.176-.273-.362.354-.836.674-1.95.77-2.966C.744 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7M5 8a1 1 0 1 0-2 0 1 1 0 0 0 2 0m4 0a1 1 0 1 0-2 0 1 1 0 0 0 2 0m3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2" />
+                                    </svg> Chat</button>
+                            </div>
+                            <div class="col">
+                                <button class="btn btn-light" id="btnGoToChat"
+                                    style="width: 150px; height: 50px; padding-left: 15px;"><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-chat-dots-fill" viewBox="0 0 16 16">
+                                        <path
+                                            d="M16 8c0 3.866-3.582 7-8 7a9 9 0 0 1-2.347-.306c-.584.296-1.925.864-4.181 1.234-.2.032-.352-.176-.273-.362.354-.836.674-1.95.77-2.966C.744 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7M5 8a1 1 0 1 0-2 0 1 1 0 0 0 2 0m4 0a1 1 0 1 0-2 0 1 1 0 0 0 2 0m3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2" />
+                                    </svg> Chat</button>
+                            </div>
+                            <hr class="mt-3 mb-2" style="width:90%">
+                        </div>
+
+                        <button class='btn btn-outline-danger'>Esci dal tuo Account</button>
+                    </div>
+
+                    <!--FINE MODALE afterlog-->
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--FINE MODALE-->
+
+    <!-- Offcanvas menu -->
+    <div class="offcanvas offcanvas-end bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+        aria-labelledby="offcanvasDarkNavbarLabel">
+        <div class="offcanvas-header">
+            <h4 class="offcanvas-title" style="color:white" id="offcanvasDarkNavbarLabel">Menu</h4>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html" style="color:white">Home</a>
+                </li>
+                <li>
+                    <hr class="dropdown-divider" style="color:white">
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="sartoriaOggi.html" style="color:white">Sartoria Italiana</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="sartoriaUnTempo.html" style="color:white">Storia della Sartoria</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="aboutMe.html" style="color:white">About Me</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="presaMisure.html" style="color:white">Presa Misure</a>
+                </li>
+                <li>
+                    <hr class="dropdown-divider" style="color:white">
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false" style="color:white">
+                        Personalizzazione abito
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-dark">
+                        <li><a class="dropdown-item" href="camicia.html">Camicia</a></li>
+                        <li><a class="dropdown-item" href="pantaloni.html">Pantalone</a></li>
+                        <li><a class="dropdown-item" href="#">Giacca</a></li>
+                        <li><a class="dropdown-item" href="#">Panciotto</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#"></a></li>
+                    </ul>
+                </li>
+                <li>
+                    <hr class="dropdown-divider" style="color:white">
+                </li>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" style="color:white">Pillole e Tutorial</a>
+                </li>
+                </li>
+                <li>
+                    <hr class="dropdown-divider" style="color:white">
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" style="color:white">I miei Outfit </a>
+                </li>
+                <li>
+                    <hr class="dropdown-divider" style="color:white">
+                </li>
+            </ul>
+
+            <form class="d-flex mt-3" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-success" type="submit">Search</button>
+            </form>
+
+        </div>
+    </div>
+
+    <!-- Logo -->
+    <div class="container">
+        <div class="row">
+            <div class="col text-center">
+                <img src="/images/logoManfrediCouture.png" alt="logoManfrediCouture"
+                    style="width: 400px; border-radius: 10px; margin-top: 100px;">
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container" style="margin-top: 50px;">
+
+        <h1 style="color:white; padding-left: 10px;" class="bg-dark"> 👨🏻‍🏫 Storia</h1>
+        <h4>● Scopri la sartoria in tutte le sue sfaccettature</h4>
+        <div class="row mt-5">
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="/images/fotoSartoriaItaliana.jpg" class="card-img-top" alt="fotoSartoriaItaliana">
+                    <div class="card-body">
+                        <h5 class="card-title">Sartoria Italiana</h5>
+                        <p class="card-text">Approfondisci la sartoria italiana, origini, usi ed esempi</p>
+                        <a href="sartoriaOggi.html" class="btn btn-primary">Scopri!</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="/images/sartoriaDantan.jpg" class="card-img-top" alt="fotoSartoriaItaliana"
+                        style="height: 320px; width: auto;">
+                    <div class="card-body">
+                        <h5 class="card-title">Storia della Sartoria </h5>
+                        <p class="card-text">Approfondisci la storia della sartoria mondiale, origini e differenze</p>
+                        <a href="sartoriaUnTempo.html" class="btn btn-primary">Scopri!</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="/images/fotoAboutMe.jpg" class="card-img-top" alt="fotoSartoriaItaliana" height="320">
+                    <div class="card-body">
+                        <h5 class="card-title">About Me </h5>
+                        <p class="card-text">Alla scoperta del creatore del sito, percorso e cambiamento</p>
+                        <a href="aboutMe.html" class="btn btn-primary">Scopri!</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="/images/fotoPresaMisura.jpg" class="card-img-top" alt="fotoSartoriaItaliana">
+                    <div class="card-body">
+                        <h5 class="card-title">Presa Misure</h5>
+                        <p class="card-text">Il modo migliore per prendere le misure</p>
+                        <a href="presaMisure.html" class="btn btn-primary">Scopri!</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Fine div card-->
+
+    <hr style="margin:20px; margin-top:50px; margin-left: 170px; margin-right: 170px;">
+
+    <div class="container ">
+        <h1 style="padding-left: 10px; color:white;" class="bg-dark"> ✏️ Personalizzazione dell'abito</h1>
+        <h4>● Rendi unico ogni capo del tuo abito</h4>
+        <div class="row mt-5">
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="/images/camicia.jpg.jpg" class="card-img-top" alt="fotoSartoriaItaliana">
+                    <div class="card-body">
+                        <h5 class="card-title">Camicia </h5>
+                        <p class="card-text"></p>
+                        <a href="camicia.html" class="btn btn-primary">Scopri!</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="/images/pantaloni.jpg.jpg" class="card-img-top" alt="fotoSartoriaItaliana">
+                    <div class="card-body">
+                        <h5 class="card-title">Pantaloni </h5>
+                        <p class="card-text"></p>
+                        <a href="pantaloni.html" class="btn btn-primary">Scopri!</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="/images/giacca.jpg.jpg" class="card-img-top" alt="fotoSartoriaItaliana">
+                    <div class="card-body">
+                        <h5 class="card-title">Giacca </h5>
+                        <p class="card-text"></p>
+                        <a href="giacca.html" class="btn btn-primary">Scopri!</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="/images/panciotto.jpg.jpg" class="card-img-top" alt="fotoSartoriaItaliana">
+                    <div class="card-body">
+                        <h5 class="card-title">Panciotto </h5>
+                        <p class="card-text"></p>
+                        <a href="#" class="btn btn-primary">Scopri!</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr style="margin:20px; margin-top:50px; margin-left: 170px; margin-right: 170px;">
+
+    <div class="container ">
+        <h1 style="padding-left: 10px; color:white;" class="bg-dark">💊 Pillole e Tutorial</h1>
+        <h4>● Impara come curare il tuo abito al meglio!</h4>
+        <p> proporzioni - colori - tessuti - come piegare giacca - come piegare pantaloni - come stirare una camicia -
+            gemelli - processo realizzazione - cura dei vestiti - </p>
+
+    </div>
+
+    <hr style="margin:20px; margin-top:50px; margin-left: 170px; margin-right: 170px;">
+
+    <div class="container ">
+        <h1 style="padding-left: 10px; color:white;" class="bg-dark">🤵🏻‍♂️ I miei Outfit</h1>
+        <h4>● Prendi spunto dai miei outfit!</h4>
+        <p> foto con carousel e dove li ho comprati </p>
+
+    </div>
+
+
+
+    <br>
+    <br>
+    <br>
+
+
+    <!-- Rimuovi la sezione triangle e triangle2 per adesso
+    <section class="triangle">
+        <h1>aiudfhgdfoiuhbdi</h1>
+        <p>dfiuhgeoiuhge</p>
+    </section>
+    
+    <section class="triangle2">
+        <h1>aiudfhgdfoiuhbdi</h1>
+        <p>dfiuhgeoiuhge</p>
+    </section>
+
+     -->
+
+
+    <!--FOOTER -->
+    <footer class="footer bg-dark text-white">
+        <div class="container">
+            <div class="row mt-5">
+                <div class="col mt-5 mb-5 text-center" style="border-right: 3px solid white;">
+                    <h5>Informazioni</h5>
+                    <ul class="list-unstyled">
+                        <li>Lorenzo Manfredi</li>
+                        <li>5c Inf | 2023 - 2024</li>
+                    </ul>
+                </div>
+
+                <div class="col mt-5 mb-5 text-center" style="border-right: 3px solid white;">
+                    <h5>Seguimi</h5>
+                    <ul class="list-unstyled">
+                        <!--Mettere link pagina instagram mia-->
+                        <li><a href="https://www.instagram.com/lookatlollo/?hl=it" target="_blank"
+                                class="text-white">Instagram</a></li>
+                    </ul>
+                </div>
+
+                <div class="col mt-5 mb-5 text-center">
+                    <h5>Contattami</h5>
+                    <ul class="list-unstyled">
+                        <a href="mailto:manfredilorenzo@itis-molinari.eu">Scrivi una mail</a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl)
+        })
+    </script>
+
+    <script src="script.js"></script>
+</body>
