@@ -30,40 +30,12 @@
             text-align: center;
         }
 
-        .custom-video {
-            width: 600px;
-            /* Larghezza desiderata */
-            height: 340px;
-            /* Altezza desiderata */
-            max-width: 100%;
-            /* Garantisce che il video non superi la larghezza del contenitore */
-            max-height: 100%;
-            /* Garantisce che il */
-
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            border-radius: 8px;
+        .same-size {
+            width: 100%;
+            height: 700px; /* Altezza fissa per uniformare le dimensioni */
+            object-fit: cover; /* Ritaglia l'immagine per riempire il contenitore */
         }
-
-        .custom-btn {
-    background-color: #0f4c8d; /* Colore di sfondo personalizzato */
-    border-color: #007bff; /* Colore del bordo personalizzato */
-    color: white; /* Colore del testo */
-    font-weight: bold; /* Testo in grassetto */
-    border-radius: 8px; /* Angoli arrotondati */
-    transition: background-color 0.3s, transform 0.3s; /* Effetto di transizione */
-    width: 20%;
-}
-
-.custom-btn:hover {
-    background-color: #0056b3; /* Colore di sfondo al passaggio del mouse */
-    border-color: #0056b3; /* Colore del bordo al passaggio del mouse */
-    color:white;
-    transform: scale(1.05); /* Effetto di ingrandimento al passaggio del mouse */
-}
-
-.custom-btn svg {
-    margin-right: 8px; /* Spazio tra l'icona e il testo */
-}
+ 
     </style>
 </head>
 
@@ -158,11 +130,11 @@
             <img src="/images/lanieriHeader.jpg" alt="logoManfrediCouture"
                 style="width: 100%; border-radius: 10px; margin-top: 100px;" class="image-fluid">
             <div class="text-overlay">
-                <h1><strong>Pillole di Saggezza <br> 🖋️ </strong></h1>
+                <h1><strong>Proporzioni<br> 🖋️ </strong></h1>
             </div>
         </div>
         <button type="button" class="btn btn-danger" style="margin-top:20px"
-            onclick="window.location.href='index.html'">
+            onclick="window.location.href='../index.html'">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                 class="bi bi-house-door-fill" viewBox="0 0 16 16">
                 <path
@@ -171,132 +143,70 @@
         </button>
 
     </div>
-    <div class="" style="margin-top:100px;  margin-left: 8%; margin-right: 8%;">
+    <div class="" style="margin-top:100px;  margin-left: 8%; margin-right: 8%;">       
+        <h2>Le migliori combinazioni di colori</h2>
+        <p>Saper combinare correttamente i colori e le fantasie tra di loro è una capacità fondamentale da avere se si vuole realizzare un outfit coerente e bello da vedere. <br>
+        Le combinazioni più comuni sono: </p>
 
-        <h1>Come stirare un pantalone d'abito</h1>
+        <div class="row">
+            <div class="col">
+                <div class="container mt-5">
+                    <div class="card" style="width: 300px;">
+                        <div class="card-body">
+                            <h5 class="card-title">Nero e bianco</h5>
+                            <hr class="text-secondary">
+                            <div class="d-flex justify-content-around">
+                            <button class="btn" style="background-color:black; width: 80px; height: 80px;"></button> <button class="btn border" style="background-color:white; width: 80px; height: 80px;"></button>
+        
+                            </div>
+                            <hr class="text-secondary">
+                            <div class="text-center">
+                                <img src="https://via.placeholder.com/150" alt="Foto" class="img-fluid">
+                            </div>
+                            <hr class="text-secondary">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="container mt-5">
+                    <div class="card" style="width: 300px;">
+                        <div class="card-body">
+                            <h5 class="card-title">Blu, grigio e bianco</h5>
+                            <hr class="text-secondary">
+                            <div class="d-flex justify-content-around">
+                                <button class="btn" style="background-color:rgb(16, 16, 91); width: 80px; height: 80px;"></button> <button class="btn" style="background-color:grey; width: 80px; height: 80px;"></button> <button class="btn border" style="background-color:white; width: 80px; height: 80px;"></button>
+                            </div>
+                            <hr class="text-secondary">
+                            <div class="text-center">
+                                <img src="https://via.placeholder.com/150" alt="Foto" class="img-fluid">
+                            </div>
+                            <hr class="text-secondary">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="container mt-5">
+                    <div class="card" style="width: 300px;">
+                        <div class="card-body">
+                            <h5 class="card-title">Blu e marrone</h5>
+                            <hr class="text-secondary">
+                            <div class="d-flex justify-content-around">
+                                <button class="btn" style="background-color:rgb(16, 16, 91); width: 80px; height: 80px;"></button> <button class="btn" style="background-color:rgb(71, 20, 20); width: 80px; height: 80px;"></button> 
+                            </div>
+                            <hr class="text-secondary">
+                            <div class="text-center">
+                                <img src="https://via.placeholder.com/150" alt="Foto" class="img-fluid">
+                            </div>
+                            <hr class="text-secondary">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-        <h5>Necessario:</h5>
-        <ul style="font-size:16px; list-style-type:square; padding-left: 20px;">
-            <li>Asse da stiro</li>
-            <li>Ferro da stiro</li>
-            <li>Panno in cotone</li>
-        </ul>
-
-        <div class="accordion" id="videoAccordion">
-            <div class="card" style="border:none">
-              <div class="card-header" id="headingOne" style="background-color: #dbbb92;">
-                <h2 class="mb-0">
-                  <button class="btn custom-btn collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                    Primo Lato
-                  </button>
-                </h2>
-              </div>
-              <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#videoAccordion">
-                <div class="card-body" style="background-color: #dbbb92">
-                  <div class="row">
-                    <div class="col">
-                      <video class="custom-video" controls>
-                        <source src="/videos/pantalone/primoLato.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                      </video>
-                    </div>
-                    <div class="col">
-                      <h4>Procedura:</h4>
-                      <p style="font-size:16px; text-align:justify;">
-                        Per prima cosa, stendiamo il pantalone seguendo la sua linea naturale. Tiriamo fuori le tasche per evitare di stirarci sopra, 
-                        poniamo il panno di cotone in posizione e iniziamo a stirare dall'esterno all'interno.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="card" style="border:none">
-              <div class="card-header" id="headingTwo" style="background-color: #dbbb92;">
-                <h2 class="mb-0">
-                  <button class="btn custom-btn collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                    Secondo Lato
-                  </button>
-                </h2>
-              </div>
-              <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#videoAccordion">
-                <div class="card-body" style="background-color: #dbbb92">
-                  <div class="row">
-                    <div class="col">
-                      <video class="custom-video" controls>
-                        <source src="/videos/pantalone/secondoLato.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                      </video>
-                    </div>
-                    <div class="col">
-                      <h4>Procedura:</h4>
-                      <p style="font-size:16px; text-align:justify;">
-                        Per prima cosa, stendiamo il pantalone seguendo la sua linea naturale. Tiriamo fuori le tasche per evitare di stirarci sopra, 
-                        poniamo il panno di cotone in posizione e iniziamo a stirare dall'esterno all'interno.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="card" style="border:none">
-              <div class="card-header" id="headingThree" style="background-color: #dbbb92;">
-                <h2 class="mb-0">
-                  <button class="btn custom-btn collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                    Terzo Lato
-                  </button>
-                </h2>
-              </div>
-              <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#videoAccordion">
-                <div class="card-body" style="background-color: #dbbb92">
-                  <div class="row">
-                    <div class="col">
-                      <video class="custom-video" controls>
-                        <source src="/videos/pantalone/terzoLato.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                      </video>
-                    </div>
-                    <div class="col">
-                      <h4>Procedura:</h4>
-                      <p style="font-size:16px; text-align:justify;">
-                        Per prima cosa, stendiamo il pantalone seguendo la sua linea naturale. Tiriamo fuori le tasche per evitare di stirarci sopra, 
-                        poniamo il panno di cotone in posizione e iniziamo a stirare dall'esterno all'interno.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="card" style="border:none">
-              <div class="card-header" id="headingFour" style="background-color: #dbbb92;">
-                <h2 class="mb-0">
-                  <button class="btn custom-btn collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                    Quarto Lato
-                  </button>
-                </h2>
-              </div>
-              <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#videoAccordion">
-                <div class="card-body" style="background-color: #dbbb92">
-                  <div class="row">
-                    <div class="col">
-                      <video class="custom-video" controls>
-                        <source src="/videos/pantalone/quartoLato.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                      </video>
-                    </div>
-                    <div class="col">
-                      <h4>Procedura:</h4>
-                      <p style="font-size:16px; text-align:justify;">
-                        Per prima cosa, stendiamo il pantalone seguendo la sua linea naturale. Tiriamo fuori le tasche per evitare di stirarci sopra, 
-                        poniamo il panno di cotone in posizione e iniziamo a stirare dall'esterno all'interno.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
+        
     </div>
 
 

@@ -58,7 +58,7 @@
         }
 
         .title {
-            text-align: center;
+            text-align: left;
             margin-top: 20px;
             color: #343a40;
             text-transform: uppercase;
@@ -85,11 +85,17 @@
             margin-bottom: 30px;
             border: none;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            height: 100%;
+            /* Assicura che tutte le card abbiano la stessa altezza */
         }
 
         .card img {
             border-top-left-radius: 10px;
             border-top-right-radius: 10px;
+            height: 500px;
+            /* Altezza uniforme per tutte le immagini */
+            object-fit: cover;
+            /* Ritaglia l'immagine per riempire il contenitore */
         }
 
         .card-body {
@@ -97,6 +103,10 @@
             border-bottom-left-radius: 10px;
             border-bottom-right-radius: 10px;
             padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            /* Spaziatura tra gli elementi del contenuto */
         }
 
         .card-title {
@@ -111,6 +121,11 @@
             margin-bottom: 20px;
         }
 
+        .btn {
+            align-self: flex-start;
+            /* Assicura che il pulsante sia posizionato correttamente */
+        }
+
         .btn-primary {
             background-color: #343a40;
             border: none;
@@ -123,6 +138,40 @@
         hr {
             margin: 20px 0;
             border-top: 2px solid #343a40;
+        }
+
+
+        .custom-section {
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 50px;
+            margin: 0 8%;
+            width: 100%;
+        }
+
+        .section-title {
+            font-family: 'Arial', sans-serif;
+            font-size: 2.5rem;
+            color: #343a40;
+        }
+
+        h4 {
+            font-family: 'Georgia', serif;
+            color: #6c757d;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+            border-radius: 25px;
+            padding: 10px 20px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
         }
     </style>
 </head>
@@ -238,137 +287,135 @@
 
     <!-- Main Content -->
     <div class="" id="mainContainer">
-    <div class="" style="margin-top: 100px; margin-left: 8%; margin-right: 8%;">
-        <h1 class="section-title mt-3">👨🏻‍🏫 Storia</h1>
-        <h4 class="section-subtitle">● Scopri la sartoria in tutte le sue sfaccettature</h4>
-        <div class="row mt-5">
-            <div class="col-md-6 col-lg-3">
-                <div class="card" style="border-top-left-radius: 10px;
-                border-top-right-radius: 10px;">
-                    <img src="/images/fotoSartoriaItaliana.jpg" class="card-img-top" alt="fotoSartoriaItaliana">
-                    <div class="card-body">
-                        <h5 class="card-title">Sartoria Italiana</h5>
-                        <p class="card-text">Approfondisci la sartoria italiana, origini, usi ed esempi</p>
-                        <a href="sartoriaOggi.html" class="btn btn-primary">Scopri!</a>
+        <div class="" style="margin-top: 100px; margin-left: 8%; margin-right: 8%;">
+            <h1 class="section-title mt-3 text-white">👨🏻‍🏫 Storia</h1>
+            <h4 class="section-subtitle">● Scopri la sartoria in tutte le sue sfaccettature</h4>
+
+            <div class="row mt-5">
+                <div class="col-md-6 col-lg-3">
+                    <div class="card">
+                        <img src="/images/fotoSartoriaItaliana.jpg" class="card-img-top" alt="fotoSartoriaItaliana">
+                        <div class="card-body">
+                            <h5 class="card-title">Sartoria Italiana</h5>
+                            <p class="card-text">Approfondisci la sartoria italiana, origini, usi ed esempi</p>
+                            <a href="sartoriaOggi.html" class="btn btn-primary mt-auto">Scopri!</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card">
+                        <img src="/images/sartoriaDantan.jpg" class="card-img-top" alt="fotoSartoriaItaliana">
+                        <div class="card-body">
+                            <h5 class="card-title">Storia della Sartoria</h5>
+                            <p class="card-text">Approfondisci la storia della sartoria mondiale, origini e differenze
+                            </p>
+                            <a href="sartoriaUnTempo.html" class="btn btn-primary mt-auto">Scopri!</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card">
+                        <img src="/images/fotoAboutMe.jpg" class="card-img-top" alt="fotoSartoriaItaliana">
+                        <div class="card-body">
+                            <h5 class="card-title">About Me</h5>
+                            <p class="card-text">Alla scoperta del creatore del sito, percorso e cambiamento</p>
+                            <a href="aboutMe.html" class="btn btn-primary mt-auto">Scopri!</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card">
+                        <img src="/images/fotoPresaMisura.jpg" class="card-img-top" alt="fotoSartoriaItaliana">
+                        <div class="card-body">
+                            <h5 class="card-title">Presa Misure</h5>
+                            <p class="card-text">Il modo migliore per prendere le misure</p>
+                            <a href="presaMisure.html" class="btn btn-primary mt-auto">Scopri!</a>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div class="col-md-6 col-lg-3">
-                <div class="card" style="border-top-left-radius: 10px;
+
+        </div>
+
+        <hr style="margin:20px; margin-top:30px; margin-left: 10%; margin-right: 10%;">
+
+        <div class="" style="margin-left: 8%; margin-right: 8%;">
+            <h1 class="section-title text-white">✏️ Personalizzazione dell'abito</h1>
+            <h4 class="section-subtitle">● Rendi unico ogni capo del tuo abito</h4>
+            <div class="row mt-5">
+                <div class="col-md-6 col-lg-3">
+                    <div class="card" style="border-top-left-radius: 10px;
                 border-top-right-radius: 10px;">
-                    <img src="/images/sartoriaDantan.jpg" class="card-img-top" alt="fotoSartoriaItaliana"
-                        style="height: 320px; width: auto;">
-                    <div class="card-body">
-                        <h5 class="card-title">Storia della Sartoria</h5>
-                        <p class="card-text">Approfondisci la storia della sartoria mondiale, origini e differenze</p>
-                        <a href="sartoriaUnTempo.html" class="btn btn-primary">Scopri!</a>
+                        <img src="/images/camicia.jpg.jpg" class="card-img-top" alt="fotoSartoriaItaliana">
+                        <div class="card-body">
+                            <h5 class="card-title">Camicia</h5>
+                            <p class="card-text"></p>
+                            <a href="camicia.html" class="btn btn-primary">Scopri!</a>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="col-md-6 col-lg-3">
-                <div class="card" style="border-top-left-radius: 10px;
+                <div class="col-md-6 col-lg-3">
+                    <div class="card" style="border-top-left-radius: 10px;
                 border-top-right-radius: 10px;">
-                    <img src="/images/fotoAboutMe.jpg" class="card-img-top" alt="fotoSartoriaItaliana" height="320">
-                    <div class="card-body">
-                        <h5 class="card-title">About Me</h5>
-                        <p class="card-text">Alla scoperta del creatore del sito, percorso e cambiamento</p>
-                        <a href="aboutMe.html" class="btn btn-primary">Scopri!</a>
+                        <img src="/images/pantaloni.jpg.jpg" class="card-img-top" alt="fotoSartoriaItaliana">
+                        <div class="card-body">
+                            <h5 class="card-title">Pantaloni</h5>
+                            <p class="card-text"></p>
+                            <a href="pantaloni.html" class="btn btn-primary">Scopri!</a>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="col-md-6 col-lg-3">
-                <div class="card" style="border-top-left-radius: 10px;
+                <div class="col-md-6 col-lg-3">
+                    <div class="card" style="border-top-left-radius: 10px;
                 border-top-right-radius: 10px;">
-                    <img src="/images/fotoPresaMisura.jpg" class="card-img-top" alt="fotoSartoriaItaliana">
-                    <div class="card-body">
-                        <h5 class="card-title">Presa Misure</h5>
-                        <p class="card-text">Il modo migliore per prendere le misure</p>
-                        <a href="presaMisure.html" class="btn btn-primary">Scopri!</a>
+                        <img src="/images/giacca.jpg.jpg" class="card-img-top" alt="fotoSartoriaItaliana">
+                        <div class="card-body">
+                            <h5 class="card-title">Giacca</h5>
+                            <p class="card-text"></p>
+                            <a href="giacca.html" class="btn btn-primary">Scopri!</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="card" style="border-top-left-radius: 10px;
+                border-top-right-radius: 10px;">
+                        <img src="/images/panciotto.jpg.jpg" class="card-img-top" alt="fotoSartoriaItaliana">
+                        <div class="card-body">
+                            <h5 class="card-title">Panciotto</h5>
+                            <p class="card-text"></p>
+                            <a href="gilet.html" class="btn btn-primary">Scopri!</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <hr style="margin:20px; margin-top:30px; margin-left: 10%; margin-right: 10%;">
+        <hr style="margin:20px; margin-top:30px; margin-left: 10%; margin-right: 10%;">
 
-    <div class="" style="margin-left: 8%; margin-right: 8%;">
-        <h1 class="section-title">✏️ Personalizzazione dell'abito</h1>
-        <h4 class="section-subtitle">● Rendi unico ogni capo del tuo abito</h4>
-        <div class="row mt-5">
-            <div class="col-md-6 col-lg-3">
-                <div class="card" style="border-top-left-radius: 10px;
-                border-top-right-radius: 10px;">
-                    <img src="/images/camicia.jpg.jpg" class="card-img-top" alt="fotoSartoriaItaliana">
-                    <div class="card-body">
-                        <h5 class="card-title">Camicia</h5>
-                        <p class="card-text"></p>
-                        <a href="camicia.html" class="btn btn-primary">Scopri!</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-lg-3">
-                <div class="card" style="border-top-left-radius: 10px;
-                border-top-right-radius: 10px;">
-                    <img src="/images/pantaloni.jpg.jpg" class="card-img-top" alt="fotoSartoriaItaliana">
-                    <div class="card-body">
-                        <h5 class="card-title">Pantaloni</h5>
-                        <p class="card-text"></p>
-                        <a href="pantaloni.html" class="btn btn-primary">Scopri!</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-lg-3">
-                <div class="card" style="border-top-left-radius: 10px;
-                border-top-right-radius: 10px;">
-                    <img src="/images/giacca.jpg.jpg" class="card-img-top" alt="fotoSartoriaItaliana">
-                    <div class="card-body">
-                        <h5 class="card-title">Giacca</h5>
-                        <p class="card-text"></p>
-                        <a href="giacca.html" class="btn btn-primary">Scopri!</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-lg-3">
-                <div class="card" style="border-top-left-radius: 10px;
-                border-top-right-radius: 10px;">
-                    <img src="/images/panciotto.jpg.jpg" class="card-img-top" alt="fotoSartoriaItaliana">
-                    <div class="card-body">
-                        <h5 class="card-title">Panciotto</h5>
-                        <p class="card-text"></p>
-                        <a href="gilet.html" class="btn btn-primary">Scopri!</a>
-                    </div>
-                </div>
+        <div class="d-flex align-items-center justify-content-center my-5 ">
+            <div class="text-center custom-section p-4">
+                <h1 class="section-title display-4 mb-4 text-white">💊 Pillole e Tutorial</h1>
+                <h4 class="mb-4">Impara come curare il tuo abito al meglio!</h4>
+                <a href="generalTip.html" class="btn btn-primary btn-lg">Scopri!</a>
             </div>
         </div>
-    </div>
 
-    <hr style="margin:20px; margin-top:30px; margin-left: 10%; margin-right: 10%;">
-
-    <div class=" " style="margin-left: 8%; margin-right: 8%;">
-        <h1 class="section-title">💊 Pillole e Tutorial</h1>
-        <a href="tip.html" class="btn btn-primary">Scopri!</a>
-        <h4>● Impara come curare il tuo abito al meglio!</h4>
         <p> proporzioni - colori - tessuti - come piegare giacca - come piegare pantaloni - come stirare una camicia -
             gemelli - processo realizzazione - cura dei vestiti - </p>
 
+        <hr style="margin:20px; margin-top:50px; margin-left: 10%; margin-right: 10%;">
+
+        <div class=" " style="margin-left: 8%; margin-right: 8%;">
+            <h1 class="section-title text-white">🤵🏻‍♂️ I miei Outfit</h1>
+            <h4>● Prendi spunto dai miei outfit!</h4>
+            <p> foto con carousel e dove li ho comprati </p>
+
+        </div>
     </div>
-
-    <hr style="margin:20px; margin-top:50px; margin-left: 10%; margin-right: 10%;">
-
-    <div class=" " style="margin-left: 8%; margin-right: 8%;">
-        <h1 class="section-title">🤵🏻‍♂️ I miei Outfit</h1>
-        <h4>● Prendi spunto dai miei outfit!</h4>
-        <p> foto con carousel e dove li ho comprati </p>
-
-    </div>
-</div>
 
     <!--FOOTER -->
     <footer class="footer bg-dark text-white">

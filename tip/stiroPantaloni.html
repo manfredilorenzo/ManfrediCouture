@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>Manfredi Couture </title>
+    <link href="style.css" rel="stylesheet">
+    <link rel="icon" href="little logo.png" style="border-radius: 50%;">
+    <style>
+        .center-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+
+        .text-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 24px;
+            text-align: center;
+        }
+
+        .custom-video {
+            width: 600px;
+            /* Larghezza desiderata */
+            height: 340px;
+            /* Altezza desiderata */
+            max-width: 100%;
+            /* Garantisce che il video non superi la larghezza del contenitore */
+            max-height: 100%;
+            /* Garantisce che il */
+
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+        }
+
+        .custom-btn {
+    background-color: #0f4c8d; /* Colore di sfondo personalizzato */
+    border-color: #007bff; /* Colore del bordo personalizzato */
+    color: white; /* Colore del testo */
+    font-weight: bold; /* Testo in grassetto */
+    border-radius: 8px; /* Angoli arrotondati */
+    transition: background-color 0.3s, transform 0.3s; /* Effetto di transizione */
+    width: 20%;
+}
+
+.custom-btn:hover {
+    background-color: #0056b3; /* Colore di sfondo al passaggio del mouse */
+    border-color: #0056b3; /* Colore del bordo al passaggio del mouse */
+    color:white;
+    transform: scale(1.05); /* Effetto di ingrandimento al passaggio del mouse */
+}
+
+.custom-btn svg {
+    margin-right: 8px; /* Spazio tra l'icona e il testo */
+}
+    </style>
+</head>
+
+<body style="background-color: #dbbb92">
+
+    <nav class="navbar navbar-dark bg-dark fixed-top mb-5">
+        <div class="container-fluid">
+    
+
+            <a class="navbar-brand" href="#">
+                <img src="/images/little logo.png" alt="Logo" width="30" height="24"
+                    class="d-inline-block align-text-top">
+                Manfredi Couture
+            </a>
+            <div class="collapse navbar-collapse justify-content-end"></div>
+            <div class="marquee-container">
+                    <marquee direction="right" scrollamount="5" class="marquee  mt-2 text-white"
+                        style="margin-left: 800px; background-color: #343a40;">Capolavoro di Lorenzo Manfredi 5C inf
+                        2023/2024</marquee>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+            
+        </div>
+    </nav>
+
+    <!-- Offcanvas menu -->
+    <div class="offcanvas offcanvas-end bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+        aria-labelledby="offcanvasDarkNavbarLabel">
+        <div class="offcanvas-header">
+            <h4 class="offcanvas-title" style="color:white" id="offcanvasDarkNavbarLabel">Menu</h4>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#" style="color:white">Home</a>
+                </li>
+                <li>
+                    <hr class="dropdown-divider" style="color:white">
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" style="color:white">Sartoria Italiana</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" style="color:white">Storia della Sartoria</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" style="color:white">About Me</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" style="color:white">Presa Misure</a>
+                </li>
+                <li>
+                    <hr class="dropdown-divider" style="color:white">
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false" style="color:white">
+                        Personalizzazione abito
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-dark">
+                        <li><a class="dropdown-item" href="#">Camicia</a></li>
+                        <li><a class="dropdown-item" href="#">Pantalone</a></li>
+                        <li><a class="dropdown-item" href="#">Giacca</a></li>
+                        <li><a class="dropdown-item" href="#">Panciotto</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#"></a></li>
+                    </ul>
+                </li>
+            </ul>
+            <!--
+            <form class="d-flex mt-3" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-success" type="submit">Search</button>
+            </form>
+            -->
+        </div>
+    </div>
+
+    <!--INIZIO PAGINA-->
+
+    <div class="" style=" margin-left: 8%; margin-right: 8%;">
+        <div class="position-relative">
+            <img src="/images/lanieriHeader.jpg" alt="logoManfrediCouture"
+                style="width: 100%; border-radius: 10px; margin-top: 100px;" class="image-fluid">
+            <div class="text-overlay">
+                <h1><strong>Pillole di Saggezza <br> 🖋️ </strong></h1>
+            </div>
+        </div>
+        <button type="button" class="btn btn-danger" style="margin-top:20px"
+            onclick="window.location.href='index.html'">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-house-door-fill" viewBox="0 0 16 16">
+                <path
+                    d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5" />
+            </svg>
+        </button>
+
+    </div>
+    <div class="" style="margin-top:100px;  margin-left: 8%; margin-right: 8%;">
+
+        <h1>Come stirare un pantalone d'abito</h1>
+        <p>Tutti i pantaloni da abito presentano una piega lungo la gamba fatta durante il processo di creazione, questa pieg è importante mentenerla ben stirata per una corretta silouette del pantalone. <br>Solitamente si stirano i pantaloni prima di ogni volta che si andranno ad indossare. </p>
+
+        <h5>Necessario:</h5>
+        <ul style="font-size:16px; list-style-type:square; padding-left: 20px;">
+            <li>Asse da stiro</li>
+            <li>Ferro da stiro</li>
+            <li>Panno in cotone</li>
+        </ul>
+
+        <div class="accordion" id="videoAccordion">
+            <div class="card" style="border:none">
+              <div class="card-header" id="headingOne" style="background-color: #dbbb92;">
+                <h2 class="mb-0">
+                  <button class="btn custom-btn collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                    Primo Lato
+                  </button>
+                </h2>
+              </div>
+              <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#videoAccordion">
+                <div class="card-body" style="background-color: #dbbb92">
+                  <div class="row">
+                    <div class="col">
+                      <video class="custom-video" controls>
+                        <source src="/videos/pantalone/primoLato.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video>
+                    </div>
+                    <div class="col">
+                      <h4>Procedura:</h4>
+                      <p style="font-size:16px; text-align:justify;">
+                        Per prima cosa, stendiamo il pantalone seguendo la sua linea naturale. Tiriamo fuori le tasche per evitare di stirarci sopra, 
+                        poniamo il panno di cotone in posizione e iniziamo a stirare dall'esterno all'interno.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card" style="border:none">
+              <div class="card-header" id="headingTwo" style="background-color: #dbbb92;">
+                <h2 class="mb-0">
+                  <button class="btn custom-btn collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Secondo Lato
+                  </button>
+                </h2>
+              </div>
+              <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#videoAccordion">
+                <div class="card-body" style="background-color: #dbbb92">
+                  <div class="row">
+                    <div class="col">
+                      <video class="custom-video" controls>
+                        <source src="/videos/pantalone/secondoLato.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video>
+                    </div>
+                    <div class="col">
+                      <h4>Procedura:</h4>
+                      <p style="font-size:16px; text-align:justify;">
+                        giriamo il pantalone e lo sistemiamo con le mani, striamo il pantalone ma solo fino a metà coscia, per non stirare con sotto l'altra gamba del pantalone e fare pieghe fastidiose.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card" style="border:none">
+              <div class="card-header" id="headingThree" style="background-color: #dbbb92;">
+                <h2 class="mb-0">
+                  <button class="btn custom-btn collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Terzo Lato
+                  </button>
+                </h2>
+              </div>
+              <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#videoAccordion">
+                <div class="card-body" style="background-color: #dbbb92">
+                  <div class="row">
+                    <div class="col">
+                      <video class="custom-video" controls>
+                        <source src="/videos/pantalone/terzoLato.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video>
+                    </div>
+                    <div class="col">
+                      <h4>Procedura:</h4>
+                      <p style="font-size:16px; text-align:justify;">
+                       Giriamo completamente il pantalone, sistemiamo la gamba appena stirata, tiriamo fuori le tasche come prima e ripetiamo il procedimento allo stesso modo.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card" style="border:none">
+              <div class="card-header" id="headingFour" style="background-color: #dbbb92;">
+                <h2 class="mb-0">
+                  <button class="btn custom-btn collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    Quarto Lato
+                  </button>
+                </h2>
+              </div>
+              <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#videoAccordion">
+                <div class="card-body" style="background-color: #dbbb92">
+                  <div class="row">
+                    <div class="col">
+                      <video class="custom-video" controls>
+                        <source src="/videos/pantalone/quartoLato.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video>
+                    </div>
+                    <div class="col">
+                      <h4>Procedura:</h4>
+                      <p style="font-size:16px; text-align:justify;">
+                        Dopo aver stirato anche l'ultimo lato sistemiamo le tasche, li riponiamo sull'asse e li mettiamo sulla gruccia.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+    </div>
+
+
+    <!--FOOTER -->
+    <footer class="footer bg-dark text-white">
+        <div class="container">
+            <div class="row mt-5">
+                <div class="col mt-5 mb-5 text-center" style="border-right: 3px solid white;">
+                    <h5>Informazioni</h5>
+                    <ul class="list-unstyled">
+                        <li>Lorenzo Manfredi</li>
+                        <li>5c Inf | 2023 - 2024</li>
+                    </ul>
+                </div>
+
+                <div class="col mt-5 mb-5 text-center" style="border-right: 3px solid white;">
+                    <h5>Seguimi</h5>
+                    <ul class="list-unstyled">
+                        <!--Mettere link pagina instagram mia-->
+                        <li><a href="https://www.instagram.com/lookatlollo/?hl=it" target="_blank"
+                                class="text-white">Instagram</a></li>
+                    </ul>
+                </div>
+
+                <div class="col mt-5 mb-5 text-center">
+                    <h5>Contattami</h5>
+                    <ul class="list-unstyled">
+                        <a href="mailto:manfredilorenzo@itis-molinari.eu">Scrivi una mail</a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
