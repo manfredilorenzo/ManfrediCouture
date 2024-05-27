@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>Manfredi Couture </title>
+    <link href="style.css" rel="stylesheet">
+    <link rel="icon" href="little logo.png" style="border-radius: 50%;">
+    <style>
+        .center-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+
+        .text-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 24px;
+            text-align: center;
+        }
+
+        .same-size {
+            width: 100%;
+            height: 700px; /* Altezza fissa per uniformare le dimensioni */
+            object-fit: cover; /* Ritaglia l'immagine per riempire il contenitore */
+        }
+
+        .card {
+            width: 18rem;
+            height: 100%;
+        }
+        .card-img-top {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .card-body {
+            text-align: center;
+        }
+        .card-text {
+            font-size: 1.2rem;
+        }
+ 
+    </style>
+</head>
+
+<body style="background-color: #dbbb92">
+
+    <nav class="navbar navbar-dark bg-dark fixed-top mb-5">
+        <div class="container-fluid">
+    
+
+            <a class="navbar-brand" href="#">
+                <img src="/images/little logo.png" alt="Logo" width="30" height="24"
+                    class="d-inline-block align-text-top">
+                Manfredi Couture
+            </a>
+            <div class="collapse navbar-collapse justify-content-end"></div>
+            <div class="marquee-container">
+                    <marquee direction="right" scrollamount="5" class="marquee  mt-2 text-white"
+                        style="margin-left: 800px; background-color: #343a40;">Capolavoro di Lorenzo Manfredi 5C inf
+                        2023/2024</marquee>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+            
+        </div>
+    </nav>
+
+    <!-- Offcanvas menu -->
+    <div class="offcanvas offcanvas-end bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+        aria-labelledby="offcanvasDarkNavbarLabel">
+        <div class="offcanvas-header">
+            <h4 class="offcanvas-title" style="color:white" id="offcanvasDarkNavbarLabel">Menu</h4>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#" style="color:white">Home</a>
+                </li>
+                <li>
+                    <hr class="dropdown-divider" style="color:white">
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" style="color:white">Sartoria Italiana</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" style="color:white">Storia della Sartoria</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" style="color:white">About Me</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" style="color:white">Presa Misure</a>
+                </li>
+                <li>
+                    <hr class="dropdown-divider" style="color:white">
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false" style="color:white">
+                        Personalizzazione abito
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-dark">
+                        <li><a class="dropdown-item" href="#">Camicia</a></li>
+                        <li><a class="dropdown-item" href="#">Pantalone</a></li>
+                        <li><a class="dropdown-item" href="#">Giacca</a></li>
+                        <li><a class="dropdown-item" href="#">Panciotto</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#"></a></li>
+                    </ul>
+                </li>
+            </ul>
+            <!--
+            <form class="d-flex mt-3" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-success" type="submit">Search</button>
+            </form>
+            -->
+        </div>
+    </div>
+
+    <!--INIZIO PAGINA-->
+
+    <div class="" style=" margin-left: 8%; margin-right: 8%;">
+        <div class="position-relative">
+            <img src="/images/lanieriHeader.jpg" alt="logoManfrediCouture"
+                style="width: 100%; border-radius: 10px; margin-top: 100px;" class="image-fluid">
+            <div class="text-overlay">
+                <h1><strong>Tessuti<br>  </strong></h1>
+            </div>
+        </div>
+        <button type="button" class="btn btn-danger" style="margin-top:20px"
+            onclick="window.location.href='../index.html'">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-house-door-fill" viewBox="0 0 16 16">
+                <path
+                    d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5" />
+            </svg>
+        </button>
+
+    </div>
+    <div class="" style="margin-top:100px;  margin-left: 8%; margin-right: 8%;">       
+
+        <h2>La scelta del tessuto migliore dipende da </h2>
+        <ul style="font-size: 20px;">
+            <li>Clima</li>
+            <li>Evento</li>
+
+        </ul>
+        <p style="font-size:18px">Durante il periodo freddo si può optare per tessuti come il tweed, flanella o il velluto a coste, invece durante l'estate e i periodo di caldo più intensi è consigliabile scegliere tessuti come il lino, il seersucker, lana leggera o il cotone (con un fit un pò più largo)</p>
+
+
+        <h3 class="text-center mb-3 mt-5">Tessuti Pesanti</h3>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="card">
+                        <img class="card-img-top" src="/images/vellutoACoste.jpg" alt="Velluto a coste">
+                        <div class="card-body">
+                            <p class="card-text">Velluto a coste</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img class="card-img-top" src="/images/tweedTessuto.webp" alt="Tweed">
+                        <div class="card-body">
+                            <p class="card-text">Tweed</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img class="card-img-top" src="/images/flanellaTessuto.jpeg" alt="Flanella">
+                        <div class="card-body">
+                            <p class="card-text">Flanella</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h3 class="text-center mb-3 mt-5">Tessuti Leggeri</h3>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="card">
+                        <img class="card-img-top" src="/images/linoTessuto.jpeg" alt="Velluto a coste">
+                        <div class="card-body">
+                            <p class="card-text">Lino</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img class="card-img-top" src="/images/seersuckerTessuto.jpeg" alt="Tweed">
+                        <div class="card-body">
+                            <p class="card-text">Seersucker</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img class="card-img-top" src="/images/frescolanaTessuto.jpeg" alt="Flanella">
+                        <div class="card-body">
+                            <p class="card-text">Fresco lana</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--FOOTER -->
+    <footer class="footer bg-dark text-white">
+        <div class="container">
+            <div class="row mt-5">
+                <div class="col mt-5 mb-5 text-center" style="border-right: 3px solid white;">
+                    <h5>Informazioni</h5>
+                    <ul class="list-unstyled">
+                        <li>Lorenzo Manfredi</li>
+                        <li>5c Inf | 2023 - 2024</li>
+                    </ul>
+                </div>
+
+                <div class="col mt-5 mb-5 text-center" style="border-right: 3px solid white;">
+                    <h5>Seguimi</h5>
+                    <ul class="list-unstyled">
+                        <!--Mettere link pagina instagram mia-->
+                        <li><a href="https://www.instagram.com/lookatlollo/?hl=it" target="_blank"
+                                class="text-white">Instagram</a></li>
+                    </ul>
+                </div>
+
+                <div class="col mt-5 mb-5 text-center">
+                    <h5>Contattami</h5>
+                    <ul class="list-unstyled">
+                        <a href="mailto:manfredilorenzo@itis-molinari.eu">Scrivi una mail</a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
